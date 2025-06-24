@@ -57,18 +57,6 @@
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-  </style>
-</head>
-<body>
-  <h1>Choose One, My Love 💖</h1>
-
-  <div>
-    <button class="btn" onclick="showContent('kiss')">Kissing 😘</button>
-    <button class="btn" onclick="showContent('hug')">Hugging 🤗</button>
-  </div>
-
-  <div id="result"></div>
-
   <script>
   const kissMessages = [
     "Every kiss from you feels like magic 💋✨",
@@ -84,16 +72,16 @@
   ];
 
   const kissGIFs = [
-    "https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif",
-    "https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif",
-    "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
-    "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif",
-    "https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif",
-    "https://media.giphy.com/media/zkppEMFvRX5FC/giphy.gif",
-    "https://media.giphy.com/media/Z21HJj2kz9uBG/giphy.gif",
-    "https://media.giphy.com/media/ToMjGpO8uVZrZP0mZq8/giphy.gif",
-    "https://media.giphy.com/media/dsKnRuALlWsZG/giphy.gif",
-    "https://media.giphy.com/media/xUPGcEliCc7bETyfO8/giphy.gif"
+    "https://giphy.com/embed/ZL0G3c9BDX9ja",
+    "https://giphy.com/embed/FqBTvSNjNzeZG",
+    "https://giphy.com/embed/jR22gdcPiOLaE",
+    "https://giphy.com/embed/f5vXCvhSJsZxu",
+    "https://giphy.com/embed/l4KifJ8v4CndAfs6Q",
+    "https://giphy.com/embed/depezUGsaffMgzHUyP",
+    "https://giphy.com/embed/42BsuUNl1GrjJNIWvy",
+    "https://giphy.com/embed/G3va31oEEnIkM",
+    "https://giphy.com/embed/bm2O3nXTcKJeU",
+    "https://giphy.com/embed/ZL0G3c9BDX9ja"
   ];
 
   const hugMessages = [
@@ -110,16 +98,13 @@
   ];
 
   const hugGIFs = [
-    "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
-    "https://media.giphy.com/media/xT39CXg70nNS0MFNLy/giphy.gif",
-    "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
-    "https://media.giphy.com/media/xT5LMLz8sQXtTxc20g/giphy.gif",
-    "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
-    "https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif",
-    "https://media.giphy.com/media/wnsgren9NtITS/giphy.gif",
-    "https://media.giphy.com/media/3oKIPf3C7HqqYBVcCk/giphy.gif",
-    "https://media.giphy.com/media/jTnIjXYj7f541/giphy.gif",
-    "https://media.giphy.com/media/kFTKQfjK4gkxi/giphy.gif"
+    "https://giphy.com/embed/143v0Z4767T15e",
+    "https://giphy.com/embed/49mdjsMrH7oze",
+    "https://giphy.com/embed/svXXBgduBsJ1u",
+    "https://giphy.com/embed/NgA5xoalnq0RlBLAnq",
+    "https://giphy.com/embed/BXrwTdoho6hkQ",
+    "https://giphy.com/embed/QFPoctlgZ5s0E",
+    "https://giphy.com/embed/10BcGXjbHOctZC"
   ];
 
   function showContent(type) {
@@ -131,7 +116,7 @@
 
     document.getElementById("result").innerHTML = `
       <p>${msg}</p>
-      <img src="${gif}" alt="${type} GIF"/>
+      <iframe src="${gif}" frameborder="0" allowfullscreen style="max-width: 300px; border-radius: 20px; margin-top: 20px;"></iframe>
     `;
   }
 </script>
