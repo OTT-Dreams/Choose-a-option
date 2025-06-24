@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffccf2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #cc0066;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background-color: #ff66a3;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 30px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e05590;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #800040;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose One, My Love 💖</h1>
+
+  <div>
+    <button class="btn" onclick="showKiss()">Kissing 😘</button>
+    <button class="btn" onclick="showHug()">Hugging 🤗</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function showKiss() {
+      document.getElementById("result").innerHTML = `
+        <p>I’m sending you a million kisses 💋💋💋</p>
+        <img src="https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif" alt="Kissing"/>
+      `;
+    }
+
+    function showHug() {
+      document.getElementById("result").innerHTML = `
+        <p>Wrapping you in the warmest hug 🤗❤️</p>
+        <img src="https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif" alt="Hugging"/>
+      `;
+    }
+  </script>
+</body>
+</html>
