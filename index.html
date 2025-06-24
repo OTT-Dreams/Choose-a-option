@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #ffe6f0, #ffccf2);
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd6e0);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,11 +20,13 @@
 
     h1 {
       color: #cc0066;
+      font-size: 2.5em;
       margin-bottom: 40px;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .btn {
-      background-color: #ff66a3;
+      background-color: #ff4081;
       border: none;
       color: white;
       padding: 15px 30px;
@@ -32,18 +34,33 @@
       border-radius: 30px;
       margin: 10px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .btn:hover {
-      background-color: #e05590;
+      background-color: #e91e63;
+      transform: scale(1.05);
     }
 
     #result {
       margin-top: 30px;
-      font-size: 24px;
+      font-size: 22px;
       color: #800040;
       animation: fadeIn 1s ease;
+    }
+
+    .gif {
+      margin-top: 20px;
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .hearts {
+      margin-top: 10px;
+      font-size: 25px;
+      animation: pulse 1.2s infinite;
     }
 
     @keyframes fadeIn {
@@ -51,10 +68,10 @@
       to {opacity: 1;}
     }
 
-    img {
-      margin-top: 20px;
-      max-width: 300px;
-      border-radius: 20px;
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
     }
   </style>
 </head>
@@ -71,15 +88,17 @@
   <script>
     function showKiss() {
       document.getElementById("result").innerHTML = `
-        <p>I’m sending you a million kisses 💋💋💋</p>
-        <img src="https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif" alt="Kissing"/>
+        <p>You deserve all the kisses in the universe, my sweetheart! 😘💋</p>
+        <img class="gif" src="https://media.giphy.com/media/fHtb1JPbfph72/giphy.gif" alt="Kissing">
+        <div class="hearts">💖💞💖</div>
       `;
     }
 
     function showHug() {
       document.getElementById("result").innerHTML = `
-        <p>Wrapping you in the warmest hug 🤗❤️</p>
-        <img src="https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif" alt="Hugging"/>
+        <p>Here's my warmest, tightest hug, just for you. Never letting you go 🤗❤️</p>
+        <img class="gif" src="https://media.giphy.com/media/lrr9rHuoJOE0w/giphy.gif" alt="Hugging">
+        <div class="hearts">💞🤍💞</div>
       `;
     }
   </script>
