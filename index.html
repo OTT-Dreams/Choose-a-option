@@ -24,27 +24,27 @@
     }
 
     .btn {
-  background: linear-gradient(to bottom, #ff80b3, #e60073);
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  font-size: 20px;
-  border-radius: 30px;
-  margin: 10px;
-  cursor: pointer;
-  box-shadow: 0 6px #b30059;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-}
+      background: linear-gradient(to bottom, #ff80b3, #e60073);
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 30px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 6px #b30059;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+    }
 
-.btn:hover {
-  background: linear-gradient(to bottom, #ff99c2, #cc0066);
-}
+    .btn:hover {
+      background: linear-gradient(to bottom, #ff99c2, #cc0066);
+    }
 
-.btn:active {
-  top: 2px;
-  box-shadow: 0 4px #99004d;
-}
+    .btn:active {
+      top: 2px;
+      box-shadow: 0 4px #99004d;
+    }
 
     #result {
       margin-top: 30px;
@@ -58,74 +58,86 @@
       to {opacity: 1;}
     }
 
-    img {
+    iframe {
       margin-top: 20px;
       max-width: 300px;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
+  </style>
+</head>
+<body>
+  <h1>Choose One, My Love 💖</h1>
+
+  <div>
+    <button class="btn" onclick="showContent('kiss')">Kissing 😘</button>
+    <button class="btn" onclick="showContent('hug')">Hugging 🤗</button>
+  </div>
+
+  <div id="result"></div>
+
   <script>
-  const kissMessages = [
-    "Every kiss from you feels like magic 💋✨",
-    "A kiss from you brightens my whole world 😘",
-    "You + Me + Kisses = Perfect Moment 💖",
-    "Mwahh! You’re too kissable to resist 😚",
-    "Sealed with a kiss and endless love 💌",
-    "If kisses were stars, I’d give you the galaxy 🌌",
-    "Here comes a sweet kiss train... Chuuu Chuuu 💋🚂",
-    "You're my favorite place to land a kiss 😍",
-    "I’m sending you a thousand kisses right now 💋💋💋",
-    "No words, just kisses. All for you 😘💘"
-  ];
+    const kissMessages = [
+      "Every kiss from you feels like magic 💋✨",
+      "A kiss from you brightens my whole world 😘",
+      "You + Me + Kisses = Perfect Moment 💖",
+      "Mwahh! You’re too kissable to resist 😚",
+      "Sealed with a kiss and endless love 💌",
+      "If kisses were stars, I’d give you the galaxy 🌌",
+      "Here comes a sweet kiss train... Chuuu Chuuu 💋🚂",
+      "You're my favorite place to land a kiss 😍",
+      "I’m sending you a thousand kisses right now 💋💋💋",
+      "No words, just kisses. All for you 😘💘"
+    ];
 
-  const kissGIFs = [
-    "https://giphy.com/embed/ZL0G3c9BDX9ja",
-    "https://giphy.com/embed/FqBTvSNjNzeZG",
-    "https://giphy.com/embed/jR22gdcPiOLaE",
-    "https://giphy.com/embed/f5vXCvhSJsZxu",
-    "https://giphy.com/embed/l4KifJ8v4CndAfs6Q",
-    "https://giphy.com/embed/depezUGsaffMgzHUyP",
-    "https://giphy.com/embed/42BsuUNl1GrjJNIWvy",
-    "https://giphy.com/embed/G3va31oEEnIkM",
-    "https://giphy.com/embed/bm2O3nXTcKJeU",
-    "https://giphy.com/embed/ZL0G3c9BDX9ja"
-  ];
+    const kissGIFs = [
+      "https://giphy.com/embed/ZL0G3c9BDX9ja",
+      "https://giphy.com/embed/FqBTvSNjNzeZG",
+      "https://giphy.com/embed/jR22gdcPiOLaE",
+      "https://giphy.com/embed/f5vXCvhSJsZxu",
+      "https://giphy.com/embed/l4KifJ8v4CndAfs6Q",
+      "https://giphy.com/embed/depezUGsaffMgzHUyP",
+      "https://giphy.com/embed/42BsuUNl1GrjJNIWvy",
+      "https://giphy.com/embed/G3va31oEEnIkM",
+      "https://giphy.com/embed/bm2O3nXTcKJeU",
+      "https://giphy.com/embed/ZL0G3c9BDX9ja"
+    ];
 
-  const hugMessages = [
-    "Wrap yourself in this hug and feel my love 🤗❤️",
-    "Hugging you tight from miles away 💞",
-    "This hug says: I’m always with you 💘",
-    "I wish I could hold you right now 🥺💖",
-    "Virtual hugs but real feelings 💌",
-    "Just a soft, warm hug for my favorite person 💕",
-    "This hug has all my love in it 💝",
-    "Imagine my arms holding you right now 🤗",
-    "One hug = a thousand words of love 💬❤️",
-    "Hugging you in my heart all the time 🌸"
-  ];
+    const hugMessages = [
+      "Wrap yourself in this hug and feel my love 🤗❤️",
+      "Hugging you tight from miles away 💞",
+      "This hug says: I’m always with you 💘",
+      "I wish I could hold you right now 🥺💖",
+      "Virtual hugs but real feelings 💌",
+      "Just a soft, warm hug for my favorite person 💕",
+      "This hug has all my love in it 💝",
+      "Imagine my arms holding you right now 🤗",
+      "One hug = a thousand words of love 💬❤️",
+      "Hugging you in my heart all the time 🌸"
+    ];
 
-  const hugGIFs = [
-    "https://giphy.com/embed/143v0Z4767T15e",
-    "https://giphy.com/embed/49mdjsMrH7oze",
-    "https://giphy.com/embed/svXXBgduBsJ1u",
-    "https://giphy.com/embed/NgA5xoalnq0RlBLAnq",
-    "https://giphy.com/embed/BXrwTdoho6hkQ",
-    "https://giphy.com/embed/QFPoctlgZ5s0E",
-    "https://giphy.com/embed/10BcGXjbHOctZC"
-  ];
+    const hugGIFs = [
+      "https://giphy.com/embed/143v0Z4767T15e",
+      "https://giphy.com/embed/49mdjsMrH7oze",
+      "https://giphy.com/embed/svXXBgduBsJ1u",
+      "https://giphy.com/embed/NgA5xoalnq0RlBLAnq",
+      "https://giphy.com/embed/BXrwTdoho6hkQ",
+      "https://giphy.com/embed/QFPoctlgZ5s0E",
+      "https://giphy.com/embed/10BcGXjbHOctZC"
+    ];
 
-  function showContent(type) {
-    const messages = type === 'kiss' ? kissMessages : hugMessages;
-    const gifs = type === 'kiss' ? kissGIFs : hugGIFs;
+    function showContent(type) {
+      const messages = type === 'kiss' ? kissMessages : hugMessages;
+      const gifs = type === 'kiss' ? kissGIFs : hugGIFs;
 
-    const msg = messages[Math.floor(Math.random() * messages.length)];
-    const gif = gifs[Math.floor(Math.random() * gifs.length)];
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      const gif = gifs[Math.floor(Math.random() * gifs.length)];
 
-    document.getElementById("result").innerHTML = `
-      <p>${msg}</p>
-      <iframe src="${gif}" frameborder="0" allowfullscreen style="max-width: 300px; border-radius: 20px; margin-top: 20px;"></iframe>
-    `;
-  }
-</script>
+      document.getElementById("result").innerHTML = `
+        <p>${msg}</p>
+        <iframe src="${gif}" frameborder="0" allowfullscreen></iframe>
+      `;
+    }
+  </script>
 </body>
 </html>
