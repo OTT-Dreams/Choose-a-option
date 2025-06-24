@@ -24,20 +24,27 @@
     }
 
     .btn {
-      background-color: #ff66a3;
-      border: none;
-      color: white;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 30px;
-      margin: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+  background: linear-gradient(to bottom, #ff80b3, #e60073);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px #b30059;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
 
-    .btn:hover {
-      background-color: #e05590;
-    }
+.btn:hover {
+  background: linear-gradient(to bottom, #ff99c2, #cc0066);
+}
+
+.btn:active {
+  top: 2px;
+  box-shadow: 0 4px #99004d;
+}
 
     #result {
       margin-top: 30px;
