@@ -70,51 +70,70 @@
   <div id="result"></div>
 
   <script>
-    // Replace with your full list (demo with 5 items)
-    const kissMessages = [
-      "Sending you sweet kisses 😘",
-      "Here’s a kiss bomb 💣💋",
-      "Kisses just for you 💖",
-      "Mwahhh! Love you 😚",
-      "Infinite kisses for my baby 💌"
-    ];
+  const kissMessages = [
+    "Every kiss from you feels like magic 💋✨",
+    "A kiss from you brightens my whole world 😘",
+    "You + Me + Kisses = Perfect Moment 💖",
+    "Mwahh! You’re too kissable to resist 😚",
+    "Sealed with a kiss and endless love 💌",
+    "If kisses were stars, I’d give you the galaxy 🌌",
+    "Here comes a sweet kiss train... Chuuu Chuuu 💋🚂",
+    "You're my favorite place to land a kiss 😍",
+    "I’m sending you a thousand kisses right now 💋💋💋",
+    "No words, just kisses. All for you 😘💘"
+  ];
 
-    const kissGIFs = [
-      "https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif",
-      "https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif",
-      "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
-      "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif",
-      "https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif"
-    ];
+  const kissGIFs = [
+    "https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif",
+    "https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif",
+    "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
+    "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif",
+    "https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif",
+    "https://media.giphy.com/media/zkppEMFvRX5FC/giphy.gif",
+    "https://media.giphy.com/media/Z21HJj2kz9uBG/giphy.gif",
+    "https://media.giphy.com/media/ToMjGpO8uVZrZP0mZq8/giphy.gif",
+    "https://media.giphy.com/media/dsKnRuALlWsZG/giphy.gif",
+    "https://media.giphy.com/media/xUPGcEliCc7bETyfO8/giphy.gif"
+  ];
 
-    const hugMessages = [
-      "A big warm hug for you 🤗",
-      "Holding you tight in my arms 🥰",
-      "Cuddle mode: ON 💞",
-      "Wrapped in my hug forever 💝",
-      "Virtual hugs with all my love 💘"
-    ];
+  const hugMessages = [
+    "Wrap yourself in this hug and feel my love 🤗❤️",
+    "Hugging you tight from miles away 💞",
+    "This hug says: I’m always with you 💘",
+    "I wish I could hold you right now 🥺💖",
+    "Virtual hugs but real feelings 💌",
+    "Just a soft, warm hug for my favorite person 💕",
+    "This hug has all my love in it 💝",
+    "Imagine my arms holding you right now 🤗",
+    "One hug = a thousand words of love 💬❤️",
+    "Hugging you in my heart all the time 🌸"
+  ];
 
-    const hugGIFs = [
-      "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
-      "https://media.giphy.com/media/xT39CXg70nNS0MFNLy/giphy.gif",
-      "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
-      "https://media.giphy.com/media/xT5LMLz8sQXtTxc20g/giphy.gif",
-      "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"
-    ];
+  const hugGIFs = [
+    "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
+    "https://media.giphy.com/media/xT39CXg70nNS0MFNLy/giphy.gif",
+    "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
+    "https://media.giphy.com/media/xT5LMLz8sQXtTxc20g/giphy.gif",
+    "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
+    "https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif",
+    "https://media.giphy.com/media/wnsgren9NtITS/giphy.gif",
+    "https://media.giphy.com/media/3oKIPf3C7HqqYBVcCk/giphy.gif",
+    "https://media.giphy.com/media/jTnIjXYj7f541/giphy.gif",
+    "https://media.giphy.com/media/kFTKQfjK4gkxi/giphy.gif"
+  ];
 
-    function showContent(type) {
-      const messages = type === 'kiss' ? kissMessages : hugMessages;
-      const gifs = type === 'kiss' ? kissGIFs : hugGIFs;
+  function showContent(type) {
+    const messages = type === 'kiss' ? kissMessages : hugMessages;
+    const gifs = type === 'kiss' ? kissGIFs : hugGIFs;
 
-      const msg = messages[Math.floor(Math.random() * messages.length)];
-      const gif = gifs[Math.floor(Math.random() * gifs.length)];
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    const gif = gifs[Math.floor(Math.random() * gifs.length)];
 
-      document.getElementById("result").innerHTML = `
-        <p>${msg}</p>
-        <img src="${gif}" alt="${type} GIF"/>
-      `;
-    }
-  </script>
+    document.getElementById("result").innerHTML = `
+      <p>${msg}</p>
+      <img src="${gif}" alt="${type} GIF"/>
+    `;
+  }
+</script>
 </body>
 </html>
