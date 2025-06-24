@@ -58,7 +58,7 @@
       to {opacity: 1;}
     }
 
-    iframe {
+    img {
       margin-top: 20px;
       max-width: 300px;
       border-radius: 20px;
@@ -91,16 +91,16 @@
     ];
 
     const kissGIFs = [
-      "https://giphy.com/embed/ZL0G3c9BDX9ja",
-      "https://giphy.com/embed/FqBTvSNjNzeZG",
-      "https://giphy.com/embed/jR22gdcPiOLaE",
-      "https://giphy.com/embed/f5vXCvhSJsZxu",
-      "https://giphy.com/embed/l4KifJ8v4CndAfs6Q",
-      "https://giphy.com/embed/depezUGsaffMgzHUyP",
-      "https://giphy.com/embed/42BsuUNl1GrjJNIWvy",
-      "https://giphy.com/embed/G3va31oEEnIkM",
-      "https://giphy.com/embed/bm2O3nXTcKJeU",
-      "https://giphy.com/embed/ZL0G3c9BDX9ja"
+      "https://media.giphy.com/media/ZL0G3c9BDX9ja/giphy.gif",
+      "https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif",
+      "https://media.giphy.com/media/jR22gdcPiOLaE/giphy.gif",
+      "https://media.giphy.com/media/f5vXCvhSJsZxu/giphy.gif",
+      "https://media.giphy.com/media/l4KifJ8v4CndAfs6Q/giphy.gif",
+      "https://media.giphy.com/media/depezUGsaffMgzHUyP/giphy.gif",
+      "https://media.giphy.com/media/42BsuUNl1GrjJNIWvy/giphy.gif",
+      "https://media.giphy.com/media/G3va31oEEnIkM/giphy.gif",
+      "https://media.giphy.com/media/bm2O3nXTcKJeU/giphy.gif",
+      "https://media.giphy.com/media/ZL0G3c9BDX9ja/giphy.gif"
     ];
 
     const hugMessages = [
@@ -117,13 +117,13 @@
     ];
 
     const hugGIFs = [
-      "https://giphy.com/embed/143v0Z4767T15e",
-      "https://giphy.com/embed/49mdjsMrH7oze",
-      "https://giphy.com/embed/svXXBgduBsJ1u",
-      "https://giphy.com/embed/NgA5xoalnq0RlBLAnq",
-      "https://giphy.com/embed/BXrwTdoho6hkQ",
-      "https://giphy.com/embed/QFPoctlgZ5s0E",
-      "https://giphy.com/embed/10BcGXjbHOctZC"
+      "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
+      "https://media.giphy.com/media/49mdjsMrH7oze/giphy.gif",
+      "https://media.giphy.com/media/svXXBgduBsJ1u/giphy.gif",
+      "https://media.giphy.com/media/NgA5xoalnq0RlBLAnq/giphy.gif",
+      "https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif",
+      "https://media.giphy.com/media/QFPoctlgZ5s0E/giphy.gif",
+      "https://media.giphy.com/media/10BcGXjbHOctZC/giphy.gif"
     ];
 
     function showContent(type) {
@@ -135,7 +135,7 @@
 
       document.getElementById("result").innerHTML = `
         <p>${msg}</p>
-        <iframe src="${gif}" frameborder="0" allowfullscreen></iframe>
+        <img src="${gif}" alt="${type} GIF"/>
       `;
     }
   </script>
