@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #ffe6f0, #ffd6e0);
+      background: linear-gradient(to bottom, #ffe6f0, #ffccf2);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,13 +20,11 @@
 
     h1 {
       color: #cc0066;
-      font-size: 2.5em;
       margin-bottom: 40px;
-      animation: fadeIn 1s ease-in-out;
     }
 
     .btn {
-      background-color: #ff4081;
+      background-color: #ff66a3;
       border: none;
       color: white;
       padding: 15px 30px;
@@ -34,33 +32,18 @@
       border-radius: 30px;
       margin: 10px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
     }
 
     .btn:hover {
-      background-color: #e91e63;
-      transform: scale(1.05);
+      background-color: #e05590;
     }
 
     #result {
       margin-top: 30px;
-      font-size: 22px;
+      font-size: 24px;
       color: #800040;
-      animation: fadeIn 1s ease;
-    }
-
-    .gif {
-      margin-top: 20px;
-      max-width: 320px;
-      border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
-
-    .hearts {
-      margin-top: 10px;
-      font-size: 25px;
-      animation: pulse 1.2s infinite;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -68,10 +51,11 @@
       to {opacity: 1;}
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.8; }
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -79,26 +63,56 @@
   <h1>Choose One, My Love 💖</h1>
 
   <div>
-    <button class="btn" onclick="showKiss()">Kissing 😘</button>
-    <button class="btn" onclick="showHug()">Hugging 🤗</button>
+    <button class="btn" onclick="showContent('kiss')">Kissing 😘</button>
+    <button class="btn" onclick="showContent('hug')">Hugging 🤗</button>
   </div>
 
   <div id="result"></div>
 
   <script>
-    function showKiss() {
-      document.getElementById("result").innerHTML = `
-        <p>You deserve all the kisses in the universe, my sweetheart! 😘💋</p>
-        <img class="gif" src="https://media.giphy.com/media/fHtb1JPbfph72/giphy.gif" alt="Kissing">
-        <div class="hearts">💖💞💖</div>
-      `;
-    }
+    // Replace with your full list (demo with 5 items)
+    const kissMessages = [
+      "Sending you sweet kisses 😘",
+      "Here’s a kiss bomb 💣💋",
+      "Kisses just for you 💖",
+      "Mwahhh! Love you 😚",
+      "Infinite kisses for my baby 💌"
+    ];
 
-    function showHug() {
+    const kissGIFs = [
+      "https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif",
+      "https://media.giphy.com/media/FqBTvSNjNzeZG/giphy.gif",
+      "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
+      "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif",
+      "https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif"
+    ];
+
+    const hugMessages = [
+      "A big warm hug for you 🤗",
+      "Holding you tight in my arms 🥰",
+      "Cuddle mode: ON 💞",
+      "Wrapped in my hug forever 💝",
+      "Virtual hugs with all my love 💘"
+    ];
+
+    const hugGIFs = [
+      "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
+      "https://media.giphy.com/media/xT39CXg70nNS0MFNLy/giphy.gif",
+      "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
+      "https://media.giphy.com/media/xT5LMLz8sQXtTxc20g/giphy.gif",
+      "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"
+    ];
+
+    function showContent(type) {
+      const messages = type === 'kiss' ? kissMessages : hugMessages;
+      const gifs = type === 'kiss' ? kissGIFs : hugGIFs;
+
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      const gif = gifs[Math.floor(Math.random() * gifs.length)];
+
       document.getElementById("result").innerHTML = `
-        <p>Here's my warmest, tightest hug, just for you. Never letting you go 🤗❤️</p>
-        <img class="gif" src="https://media.giphy.com/media/lrr9rHuoJOE0w/giphy.gif" alt="Hugging">
-        <div class="hearts">💞🤍💞</div>
+        <p>${msg}</p>
+        <img src="${gif}" alt="${type} GIF"/>
       `;
     }
   </script>
